@@ -524,7 +524,7 @@
 
     if(mag>0.12){
       var camYaw=Math.atan2(camera.position.x-player.x, camera.position.z-player.z);
-      var moveAngle=Math.atan2(ix, -iy) + camYaw + Math.PI;
+      var moveAngle=Math.atan2(-ix, -iy) + camYaw + Math.PI;
       var targetSpeed=(isRun?RUN:WALK)*mag;
       player.speed += (targetSpeed-player.speed)*0.2;
       var da=((moveAngle-player.angle+Math.PI*3)%(Math.PI*2))-Math.PI;
